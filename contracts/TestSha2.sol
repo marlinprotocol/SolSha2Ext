@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: UNLICENSED
-pragma solidity 0.8.15;
+pragma solidity 0.8.24;
 
 import { Sha2Ext } from "./lib/Sha2Ext.sol";
 import { LibBytes } from "./lib/LibBytes.sol";

@@ -22,7 +22,7 @@
 // https://github.com/0xProject/exchange-v3/blob/aae46bef841bfd1cc31028f41793db4fe7197084/contracts/utils/contracts/src/LibBytes.sol
 // solhint-enable max-line-length
 
-pragma solidity 0.8.15;
+pragma solidity 0.8.24;
 
 library LibBytes {
     using LibBytes for bytes;
