@@ -128,7 +128,7 @@ library Sha2Ext {
         }
     }
 
-    function sha384(bytes memory message) internal pure returns (bytes32, bytes16) {
+    function sha384(bytes memory message) internal pure returns (bytes16, bytes32) {
         uint64[8] memory h = [
             0xcbbb9d5dc1059ed8,
             0x629a292a367cd507,
@@ -141,8 +141,8 @@ library Sha2Ext {
         ];
         sha2(message, h);
         return (
-            bytes32(abi.encodePacked(bytes8(h[0]), bytes8(h[1]), bytes8(h[2]), bytes8(h[3]))),
-            bytes16(abi.encodePacked(bytes8(h[4]), bytes8(h[5])))
+            bytes16(abi.encodePacked(bytes8(h[0]), bytes8(h[1]))),
+            bytes32(abi.encodePacked(bytes8(h[2]), bytes8(h[3]), bytes8(h[4]), bytes8(h[5])))
         );
     }
 
